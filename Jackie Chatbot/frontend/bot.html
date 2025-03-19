@@ -3,21 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🤖 Jackie AI Chatbot</title>
-    <link rel="icon" >
+    <title>Jackie AI - Smart Assistant</title>
     <link rel="stylesheet" href="bot.css">
+    <script defer src="bot.js"></script>
 </head>
 <body>
-    <div class="chat-container">
-        <div class="chat-header">
-            <h2>🤖 Jackie AI</h2>
-        </div>
-        <div id="chat-box" class="chat-box"></div>
-        <div class="chat-input">
-            <input type="text" id="user-input" placeholder="Type your message..." onkeypress="handleKeyPress(event)">
-            <button onclick="sendMessage()">🚀 Send</button>
-        </div>
+    <div class="container">
+        <!-- Sidebar for Chat History -->
+        <aside class="sidebar">
+            <h2>📜 Chat History</h2>
+            <ul id="chat-history"></ul>
+        </aside>
+
+        <!-- Spacer (Creates Space Between Sidebar and Chatbot) -->
+        <div class="spacer"></div>
+
+        <!-- Chat Interface -->
+        <section class="chat-container">
+            <header class="chat-header">
+                <h2> Iam Your Personal Companion</h2>
+            </header>
+            <main id="chat-box" class="chat-box"></main>
+            <footer class="chat-input">
+                <input type="text" id="user-input" placeholder="Type a message..." onkeydown="handleKeyPress(event)">
+                <button onclick="sendMessage()">🚀 Send</button>
+            </footer>
+        </section>
     </div>
-    <script src="bot.js"></script>
 </body>
 </html>
